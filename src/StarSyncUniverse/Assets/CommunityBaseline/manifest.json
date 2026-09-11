@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedUtc": "2026-09-05T20:12:05.00697+00:00",
+  "purpose": "StarSyncUniverse standalone community baseline",
+  "systems": [
+    "stanton",
+    "pyro",
+    "nyx"
+  ],
+  "builds": {
+    "nyx": "sc-alpha-4.10.0-hotfix|P4=12545750|BuildId=0ca4083d-bfca-4099-b4e8-312b2f6c1772|Version=1.0.191.28374",
+    "pyro": "sc-alpha-4.10.0-hotfix|P4=12545750|BuildId=0ca4083d-bfca-4099-b4e8-312b2f6c1772|Version=1.0.191.28374",
+    "stanton": "sc-alpha-4.10.0-hotfix|P4=12545750|BuildId=0ca4083d-bfca-4099-b4e8-312b2f6c1772|Version=1.0.191.28374"
+  },
+  "knowledge": {
+    "locations": 2056,
+    "factions": 74,
+    "services": 22,
+    "tradeLocations": 965,
+    "commodityRelationLocations": 138,
+    "commodities": 25,
+    "itemIndexCountAtFreeze": 21909
+  },
+  "runtimePolicy": "Bundled spatial snapshots \u002B bundled canonical location knowledge are the no-tool default. Optional adapters may refresh/enrich but are never required for first start."
+}

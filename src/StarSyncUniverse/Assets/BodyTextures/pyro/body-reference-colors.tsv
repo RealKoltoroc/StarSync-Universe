@@ -1,0 +1,13 @@
+Container	BodyName	DarkRGB	MidRGB	LightRGB	WarmRGB	CoolRGB	MeanRGB	GasGiant	ForceCloudFree	Reference
+pyro1	Pyro I	0.003,0.666,0.972	0.005,0.7,0.976	0.146,0.778,0.982	0.005,0.7,0.976	0,0.683,0.971	0.092,0.719,0.977	False	False	https://starcitizen.tools/File:Pyro-PyroI-orbit-4.0PTU.jpg
+pyro2	Monox	0.46,0.488,0.59	0.571,0.544,0.662	0.671,0.59,0.713	0.787,0.594,0.565	0.459,0.521,0.643	0.569,0.537,0.641	False	True	https://starcitizen.tools/File:Pyro-Monox-orbit-4.0PTU_11.jpg
+pyro3	Bloom	0.179,0.437,0.657	0.242,0.482,0.695	0.624,0.674,0.749	0.242,0.482,0.695	0.159,0.439,0.673	0.389,0.55,0.701	False	False	https://starcitizen.tools/File:Pyro-bloom-orbit-4.0PTU_01.jpg
+pyro4	Pyro IV	0.396,0.536,0.483	0.679,0.614,0.513	0.766,0.735,0.634	0.737,0.549,0.425	0.273,0.53,0.503	0.609,0.626,0.549	False	False	https://starcitizen.tools/File:Pyro-PyroIV-orbit-4.0PTU.jpg
+pyro5	Pyro V	0.839,0.858,0.496	0.894,0.887,0.542	0.927,0.905,0.573	0.869,0.864,0.477	0.894,0.887,0.542	0.88,0.879,0.535	True	False	https://starcitizen.tools/File:Pyro-PyroV-orbit-4.0PTU.jpg
+pyro5a	Ignis	0.814,0.629,0.568	0.863,0.659,0.583	0.911,0.686,0.597	0.929,0.67,0.563	0.863,0.659,0.583	0.862,0.659,0.582	False	False	https://starcitizen.tools/File:Pyro-PyroV-Ignis-orbit-4.0PTU.jpg
+pyro5b	Vatra	0.297,0.308,0.253	0.476,0.492,0.412	0.602,0.613,0.518	0.342,0.318,0.261	0.476,0.492,0.412	0.452,0.462,0.388	False	False	https://starcitizen.tools/File:Pyro-PyroV-Vatra-orbit-4.0PTU.jpg
+pyro5c	Adir	0.559,0.477,0.448	0.671,0.6,0.56	0.762,0.681,0.628	0.7,0.573,0.511	0.167,0.208,0.238	0.659,0.583,0.544	False	False	https://starcitizen.tools/File:Pyro-PyroV-Adir-orbit-4.0PTU.jpg
+pyro5d	Fairo	0.537,0.237,0.25	0.659,0.277,0.27	0.8,0.328,0.26	0.832,0.317,0.222	0.659,0.277,0.27	0.661,0.289,0.257	False	False	https://starcitizen.tools/File:Pyro-PyroV-Fairo-orbit-4.0PTU.jpg
+pyro5e	Fuego	0.677,0.634,0.54	0.76,0.696,0.582	0.817,0.73,0.582	0.867,0.708,0.461	0.76,0.696,0.582	0.747,0.676,0.548	False	True	https://starcitizen.tools/File:Pyro-PyroV-Fuego-orbit-4.0PTU.jpg
+pyro5f	Vuur	0.644,0.69,0.639	0.673,0.71,0.658	0.708,0.736,0.68	0.773,0.741,0.665	0.6,0.663,0.651	0.679,0.714,0.659	False	False	https://starcitizen.tools/File:Pyro-PyroV-Vuur-orbit-4.0PTU.jpg
+pyro6	Terminus	0.363,0.317,0.296	0.479,0.413,0.374	0.638,0.538,0.458	0.569,0.467,0.384	0.479,0.413,0.374	0.501,0.434,0.386	False	True	https://starcitizen.tools/File:Pyro-Terminus-orbit-4.0PTU.jpg

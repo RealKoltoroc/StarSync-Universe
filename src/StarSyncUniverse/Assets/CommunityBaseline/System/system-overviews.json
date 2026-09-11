@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "systems": [
+    {
+      "system": "stanton",
+      "displayName": "Stanton system",
+      "description": "A single-star UEE system with four corporately owned worlds. All four lie within a broad habitable zone and have undergone limited terraforming, producing distinct local ecologies.",
+      "affiliation": "United Empire of Earth",
+      "jurisdiction": "UEE",
+      "size": "4.85 AU",
+      "starType": "G-type main sequence",
+      "stats": [
+        { "key": "stars", "label": "Star", "value": 1 },
+        { "key": "planets", "label": "Planets", "value": 4 },
+        { "key": "moons", "label": "Moons", "value": 12 },
+        { "key": "belts", "label": "Belts", "value": 2 },
+        { "key": "stations", "label": "Stations", "value": 24 },
+        { "key": "jumpPoints", "label": "Jump points", "value": 4 }
+      ],
+      "sourceName": "starcitizen.tools",
+      "sourceUrl": "https://starcitizen.tools/Stanton_system",
+      "sourceCheckedUtc": "2026-09-05T20:30:00Z"
+    },
+    {
+      "system": "pyro",
+      "displayName": "Pyro system",
+      "description": "A dangerous and largely anarchic system centered on an unstable flare star. With no central governing authority, control is fragmented among settlements, independent groups and competing gangs.",
+      "affiliation": "Unclaimed",
+      "jurisdiction": "Unclaimed",
+      "size": "9.83 AU",
+      "starType": "Flare Star",
+      "stats": [
+        { "key": "stars", "label": "Star", "value": 1 },
+        { "key": "planets", "label": "Planets", "value": 5 },
+        { "key": "moons", "label": "Moons", "value": 7 },
+        { "key": "belts", "label": "Belts", "value": 1 },
+        { "key": "stations", "label": "Stations", "value": 17 },
+        { "key": "jumpPoints", "label": "Jump points", "value": 7 }
+      ],
+      "sourceName": "starcitizen.tools",
+      "sourceUrl": "https://starcitizen.tools/Pyro_system",
+      "sourceCheckedUtc": "2026-09-05T20:30:00Z"
+    },
+    {
+      "system": "nyx",
+      "displayName": "Nyx system",
+      "description": "An unclaimed system bordering a dark nebula. Much of its inhabited activity is centered around the People's Alliance and Levski, while the surrounding belts and remote stations remain comparatively isolated.",
+      "affiliation": "Unclaimed",
+      "jurisdiction": "People's Alliance (de facto)",
+      "size": "11.2 AU",
+      "starType": "F-type main sequence",
+      "stats": [
+        { "key": "stars", "label": "Star", "value": 1 },
+        { "key": "planets", "label": "Planets", "value": 4 },
+        { "key": "moons", "label": "Moons", "value": 0 },
+        { "key": "belts", "label": "Belts", "value": 2 },
+        { "key": "stations", "label": "Stations", "value": 5 },
+        { "key": "jumpPoints", "label": "Jump points", "value": 7 }
+      ],
+      "sourceName": "starcitizen.tools",
+      "sourceUrl": "https://starcitizen.tools/Nyx_system",
+      "sourceCheckedUtc": "2026-09-05T20:30:00Z"
+    }
+  ]
+}

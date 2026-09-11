@@ -1,0 +1,13 @@
+BodyName	Container	Strategy	Source	ColorChart	Status
+pyro1	pyro1	DERIVED_TERRAIN_PRESENTATION	pyro1_clim.png+pyro1_splat.png	1_pyro_cch.png	OK
+pyro2	pyro2	DERIVED_TERRAIN_PRESENTATION	pyro2_clim.png+pyro2_splat.png	2_pyro_orbit_cch_01.png	OK
+pyro3	pyro3	DERIVED_TERRAIN_PRESENTATION	pyro3_clim.png+pyro3_splat.png	pyro3_cch.png	OK
+pyro4	pyro4	DERIVED_TERRAIN_PRESENTATION	pyro4_clim.png+pyro4_splat.png	pyro4_cch.png	OK
+pyro5	pyro5	GAS_GIANT_PRESENTATION	pyro5_cloud_global.png+pyro5_cloud_tint_gradient.png	5_pyro_orbit_cch_01.png	OK
+pyro5a	pyro5a	DERIVED_TERRAIN_PRESENTATION	pyro5a_clim.png+pyro5a_splat.png	5a_pyro_orbit_cch_01.png	OK
+pyro5b	pyro5b	DERIVED_TERRAIN_PRESENTATION	pyro5b_clim.png+pyro5b_splat.png	5b_pyro_orbit_cch_01.png	OK
+pyro5c	pyro5c	DERIVED_TERRAIN_PRESENTATION	pyro5c_clim.png+pyro5c_splat.png	5c_pyro_orbit_cch_01.png	OK
+pyro5d	pyro5d	DERIVED_TERRAIN_PRESENTATION	pyro5d_clim.png+pyro5d_splat.png	pyro5d_cch.png	OK
+pyro5e	pyro5e	DERIVED_TERRAIN_PRESENTATION	pyro5e_clim.png+pyro5e_splat.png	pyro5e_cch.png	OK
+pyro5f	pyro5f	DERIVED_TERRAIN_PRESENTATION	pyro5f_clim.png+pyro5f_splat.png	pyro5f_cch.png	OK
+pyro6	pyro6	DERIVED_TERRAIN_PRESENTATION	pyro6_clim.png+pyro6_splat.png	pyro6_cch.png	OK
