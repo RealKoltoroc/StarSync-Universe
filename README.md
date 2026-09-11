@@ -67,8 +67,6 @@ The map combines a metric spatial core with a GPU-accelerated presentation layer
 
 ## Screenshot gallery
 
-The public README is prepared for five screenshots. Add the images below to `docs/screenshots/` and uncomment the matching Markdown lines in this section. Recommended subjects and captions are documented in `docs/SCREENSHOT_PLAN.md`.
-
 ### 1. Stanton system overview
 ![Stanton system overview](docs/screenshots/01-stanton-system-overview.png)
 
@@ -183,7 +181,7 @@ There are no paid feature locks implied by this support link.
 
 ## License
 
-The original StarSync Universe source code in this repository is licensed under **GNU GPL-3.0-or-later**. Third-party libraries, community datasets, trademarks and external/game-derived reference material retain their own licenses and terms and are not relicensed by this project.
+The original StarSync Universe source code in this repository is licensed under **GNU GPL-3.0-or-later**. Third-party libraries, community datasets, trademarks and external/game-derived reference material retain their own licenses and terms and are not relicensed by this project. 
 
 See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
 
