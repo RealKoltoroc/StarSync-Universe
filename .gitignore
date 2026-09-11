@@ -1,0 +1,36 @@
+# .NET build output
+**/bin/
+**/obj/
+release/publish/
+release/*.zip
+release/*.exe
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Runtime/local data
+logs/
+cache/
+Snapshots/
+Diagnostics/
+Bookmarks/
+settings*.json
+*.log
+
+# Local game/community data inputs
+database/*
+!database/README.md
+*.p4k
+starbreaker.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+

@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/StarSyncUniverse.Contracts/StarSyncUniverse.Contracts.csproj" />
+    <Project Path="src/StarSyncUniverse/StarSyncUniverse.csproj" />
+  </Folder>
+</Solution>
