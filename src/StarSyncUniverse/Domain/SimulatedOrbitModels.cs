@@ -1,0 +1,26 @@
+namespace StarSyncUniverse.Domain;
+
+public sealed record SimulatedOrbitRecord(
+    string OrbitId,
+    string System,
+    string ChildPlacementId,
+    string ParentPlacementId,
+    string ChildName,
+    string ParentName,
+    string Category,
+    double CenterX,
+    double CenterY,
+    double CenterZ,
+    double RadiusMeters,
+    double BasisUx,
+    double BasisUy,
+    double BasisUz,
+    double BasisVx,
+    double BasisVy,
+    double BasisVz,
+    double NormalX,
+    double NormalY,
+    double NormalZ,
+    string GeometryModel,
+    string SourceAuthority,
+    string DataStatus);

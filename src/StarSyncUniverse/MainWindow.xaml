@@ -1,0 +1,247 @@
+<Window x:Class="StarSyncUniverse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="StarSyncUniverse" Height="900" Width="1500" MinHeight="700" MinWidth="1100"
+        Icon="Assets/Branding/StarSyncUniverse.ico"
+        WindowStartupLocation="CenterScreen" Background="#02070B">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="#C8EFFB" />
+            <Setter Property="Background" Value="#0B2634" />
+            <Setter Property="BorderBrush" Value="#1D6882" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="12,5" />
+            <Setter Property="Cursor" Value="Hand" />
+        </Style>
+        <Style x:Key="NavButton" TargetType="Button">
+            <Setter Property="Foreground" Value="#A9D8E7" />
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="0,0,0,2" />
+            <Setter Property="Padding" Value="15,8" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="#E7FBFF" />
+                    <Setter Property="Background" Value="#0A2430" />
+                    <Setter Property="BorderBrush" Value="#16BDE4" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="ActiveNavButton" TargetType="Button" BasedOn="{StaticResource NavButton}">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="#0A2430" />
+            <Setter Property="BorderBrush" Value="#19C6E7" />
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Foreground" Value="#DBF5FC" />
+            <Setter Property="Background" Value="#071923" />
+            <Setter Property="BorderBrush" Value="#1B5E76" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="7,3" />
+        </Style>
+        <Style x:Key="SystemSelectorItem" TargetType="ComboBoxItem">
+            <Setter Property="Foreground" Value="#CDECF5" />
+            <Setter Property="Background" Value="#071923" />
+            <Setter Property="Padding" Value="9,6" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBoxItem">
+                        <Border x:Name="ItemBorder" Background="{TemplateBinding Background}" BorderBrush="#123C4E" BorderThickness="0,0,0,1" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsHighlighted" Value="True"><Setter TargetName="ItemBorder" Property="Background" Value="#0D3342" /><Setter Property="Foreground" Value="#F2FDFF" /></Trigger>
+                            <Trigger Property="IsSelected" Value="True"><Setter TargetName="ItemBorder" Property="Background" Value="#0A4050" /><Setter Property="Foreground" Value="#8BE9F8" /></Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="SystemSelectorComboBox" TargetType="ComboBox">
+            <Setter Property="Foreground" Value="#DDF7FC" />
+            <Setter Property="Background" Value="#061923" />
+            <Setter Property="BorderBrush" Value="#1A6179" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="8,3" />
+            <Setter Property="FontSize" Value="10.5" />
+            <Setter Property="ItemContainerStyle" Value="{StaticResource SystemSelectorItem}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Grid>
+                            <Border x:Name="Outer" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+                                <Grid>
+                                    <ContentPresenter Margin="9,0,30,0" VerticalAlignment="Center" Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" />
+                                    <Border Width="28" HorizontalAlignment="Right" BorderBrush="#15475A" BorderThickness="1,0,0,0" Background="#09212C">
+                                        <Path Width="8" Height="5" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#68CFE3" Data="M 0 0 L 8 0 L 4 5 Z" />
+                                    </Border>
+                                </Grid>
+                            </Border>
+                            <Popup x:Name="PART_Popup" Placement="Bottom" AllowsTransparency="True" Focusable="False" IsOpen="{TemplateBinding IsDropDownOpen}" PopupAnimation="Fade">
+                                <Border Margin="0,2,0,0" MinWidth="{Binding ActualWidth, RelativeSource={RelativeSource TemplatedParent}}" MaxHeight="260" Background="#F207151E" BorderBrush="#2B687E" BorderThickness="1" CornerRadius="2">
+                                    <ScrollViewer CanContentScroll="True"><ItemsPresenter /></ScrollViewer>
+                                </Border>
+                            </Popup>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True"><Setter TargetName="Outer" Property="BorderBrush" Value="#35A6C2" /></Trigger>
+                            <Trigger Property="IsKeyboardFocusWithin" Value="True"><Setter TargetName="Outer" Property="BorderBrush" Value="#4ED2EA" /></Trigger>
+                            <Trigger Property="IsEnabled" Value="False"><Setter Property="Opacity" Value="0.58" /></Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>        <Style x:Key="GalaxySearchTextBox" TargetType="TextBox">
+            <Setter Property="Foreground" Value="#E6F8FF" />
+            <Setter Property="Background" Value="#04131C" />
+            <Setter Property="BorderBrush" Value="#24637A" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="10,5,30,5" />
+            <Setter Property="FontSize" Value="11" />
+            <Setter Property="CaretBrush" Value="#55D6EE" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="GalaxySearchListItem" TargetType="ListBoxItem">
+            <Setter Property="Foreground" Value="#D9EFF7" />
+            <Setter Property="Background" Value="#061721" />
+            <Setter Property="Padding" Value="9,6" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#123A4A" />
+                    <Setter Property="Foreground" Value="White" />
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#0D2B39" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="46" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="24" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#06131C" BorderBrush="#147895" BorderThickness="0,0,0,1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="230" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center" Margin="12,0,0,0">
+                    <TextBlock Text="StarSyncUniverse" Foreground="#DDF8FF" FontWeight="SemiBold" FontSize="16" VerticalAlignment="Center" />
+                </StackPanel>
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Stretch">
+                    <Button x:Name="StarmapNavButton" Style="{StaticResource ActiveNavButton}" Content="Starmap" Click="StarmapNav_Click" />
+                    <Button x:Name="DatabaseNavButton" Style="{StaticResource NavButton}" Content="Database" Click="DatabaseNav_Click" />
+                    <Button x:Name="ToolsNavButton" Style="{StaticResource NavButton}" Content="Tools" Click="ToolsNav_Click" />
+                    <Button x:Name="SettingsNavButton" Style="{StaticResource NavButton}" Content="Settings" Click="SettingsNav_Click" />
+                    <Button x:Name="AboutNavButton" Style="{StaticResource NavButton}" Content="About" Click="AboutNav_Click" />
+                </StackPanel>
+                <Grid Grid.Column="2" Margin="20,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                    <Grid Width="440" HorizontalAlignment="Center">
+                        <TextBox x:Name="GalaxySearchBox"
+                                 Style="{StaticResource GalaxySearchTextBox}"
+                                 Height="29"
+                                 TextChanged="GalaxySearchBox_TextChanged"
+                                 PreviewKeyDown="GalaxySearchBox_PreviewKeyDown"
+                                 ToolTip="Search all galaxy objects across all loaded systems" />
+                        <TextBlock x:Name="GalaxySearchPlaceholder"
+                                   Text="Search all galaxy objects…"
+                                   Foreground="#607F8E"
+                                   FontSize="10.5"
+                                   Margin="11,0,34,0"
+                                   VerticalAlignment="Center"
+                                   IsHitTestVisible="False" />
+                        <Button x:Name="GalaxySearchClearButton"
+                                Content="×"
+                                Width="24"
+                                Height="24"
+                                Padding="0"
+                                Margin="0,0,3,0"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Center"
+                                Background="Transparent"
+                                BorderBrush="Transparent"
+                                Foreground="#83C8D8"
+                                Visibility="Collapsed"
+                                Click="GalaxySearchClearButton_Click" />
+                    </Grid>
+                    <Popup x:Name="GalaxySearchPopup"
+                           PlacementTarget="{Binding ElementName=GalaxySearchBox}"
+                           Placement="Bottom"
+                           HorizontalOffset="0"
+                           VerticalOffset="2"
+                           StaysOpen="False"
+                           AllowsTransparency="True">
+                        <Border Width="440" MaxHeight="330" Background="#F206151E" BorderBrush="#2B687E" BorderThickness="1">
+                            <ListBox x:Name="GalaxySearchResults"
+                                     Background="#06151E"
+                                     BorderThickness="0"
+                                     ItemContainerStyle="{StaticResource GalaxySearchListItem}"
+                                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                     PreviewMouseLeftButtonUp="GalaxySearchResults_PreviewMouseLeftButtonUp" />
+                        </Border>
+                    </Popup>
+                </Grid>
+                <StackPanel Grid.Column="3" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                    <TextBlock x:Name="SystemLabelText" Text="System:" Foreground="#6B9CB0" FontSize="10" VerticalAlignment="Center" Margin="0,0,7,0" />
+                    <ComboBox x:Name="SystemComboBox" Style="{StaticResource SystemSelectorComboBox}" Width="112" Height="28" SelectionChanged="SystemComboBox_SelectionChanged" IsEnabled="False" />
+                    <Ellipse Width="7" Height="7" Fill="#60E893" Margin="12,0,5,0" VerticalAlignment="Center" />
+                    <TextBlock Text="LIVE" Foreground="#71E7A0" FontSize="10" VerticalAlignment="Center" />
+                    <TextBlock x:Name="CurrentDataText" Text="CURRENT DATA" Foreground="#608699" FontSize="9" VerticalAlignment="Center" Margin="11,0,0,0" />
+                    <Button x:Name="RefreshButton" Content="↻  Reload LIVE Data.p4k" Click="RefreshButton_Click" Margin="10,0,0,0" Height="28" />
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <wv2:WebView2 x:Name="MapView" DefaultBackgroundColor="#02070B" />
+            <Border x:Name="LoadingOverlay" Background="#04131B" Visibility="Visible">
+                <Grid ClipToBounds="True">
+                    <Border Background="#C904131B" />
+                    <Border Width="700" MaxWidth="760" Padding="18" CornerRadius="10"
+                            Background="#F2061822" BorderBrush="#2F6D82" BorderThickness="1"
+                            HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Border Background="#000000" CornerRadius="6" ClipToBounds="True">
+                                <Image Source="Assets/Branding/starsyncuniverse_boot.jpg"
+                                       Width="600" Height="338"
+                                       Stretch="Uniform"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       SnapsToDevicePixels="True" />
+                            </Border>
+                            <StackPanel Grid.Row="1" HorizontalAlignment="Stretch" Margin="18,18,18,2">
+                                <TextBlock x:Name="LoadingText" Text="Reading current LIVE universe data…" Foreground="#BFEAFF" TextAlignment="Center" FontSize="12" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                <ProgressBar Height="4" Margin="0,13,0,0" IsIndeterminate="True" Foreground="#1CC5E6" Background="#071D28" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#051018" BorderBrush="#113849" BorderThickness="0,1,0,0">
+            <Grid Margin="10,0">
+                <TextBlock x:Name="StatusText" Foreground="#638899" FontFamily="Consolas" FontSize="9" VerticalAlignment="Center" Text="Initializing…" />
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <Ellipse Width="6" Height="6" Fill="#60E893" Margin="0,0,5,0" />
+                    <TextBlock Text="LIVE" Foreground="#60C98A" FontSize="9" />
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

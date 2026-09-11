@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>StarSyncUniverse</AssemblyName>
+    <RootNamespace>StarSyncUniverse</RootNamespace>
+    <ApplicationIcon>Assets\Branding\StarSyncUniverse.ico</ApplicationIcon>
+    <Version>0.7.77</Version>
+    <AssemblyVersion>0.7.77.0</AssemblyVersion>
+    <FileVersion>0.7.77.0</FileVersion>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StarSyncUniverse.Contracts\StarSyncUniverse.Contracts.csproj" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3719.77" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\MapVisuals\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\BodyTextures\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\CommunityBaseline\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Assets\Branding\**\*" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Packaging/public-Git mirror is not part of the application source tree. -->
+    <Compile Remove="public-git\**\*.cs" />
+    <Page Remove="public-git\**\*.xaml" />
+    <ApplicationDefinition Remove="public-git\**\*.xaml" />
+    <Resource Remove="public-git\**\*" />
+    <EmbeddedResource Remove="public-git\**\*" />
+    <Content Remove="public-git\**\*" />
+    <None Remove="public-git\**\*" />
+  </ItemGroup></Project>
+
+
