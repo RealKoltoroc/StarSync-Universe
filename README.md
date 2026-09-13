@@ -210,7 +210,7 @@ See:
 - [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party components,
   data sources, and license separation
 - [`LEGAL_NOTICE.md`](LEGAL_NOTICE.md) — Star Citizen / fan-project disclaimer
-- [`LICENSE_CHANGE_NOTICE.md`](LICENSE_CHANGE_NOTICE.md) — version transition
+
 
 Earlier StarSyncUniverse releases remain governed by the license terms under
 which those releases were originally distributed.
