@@ -1,61 +1,207 @@
-# Third-party notices
+# Third-Party Notices
 
-StarSyncUniverse is an unofficial community project. The project source code is prepared for publication under GPL-3.0-or-later, but third-party libraries, community data, trademarks and game-derived/reference content retain their own licenses and terms.
+StarSyncUniverse is distributed under the StarSync Universe Community Use
+License for its original project material. Third-party software, data, media,
+services, trademarks, and other materials are not relicensed under that
+license.
 
-## Microsoft WebView2
+If a third-party license or terms conflict with the StarSyncUniverse license
+for a third-party component, the third-party terms govern that component.
 
-StarSyncUniverse uses the Microsoft WebView2 SDK/runtime to host the interactive HTML/JavaScript map surface.
+This notice is intended to make that separation explicit. It is not a
+substitute for the complete upstream license text.
 
-- Project: https://developer.microsoft.com/microsoft-edge/webview2/
-- NuGet package: `Microsoft.Web.WebView2`
+## 1. Microsoft .NET / WPF
 
-The WebView2 SDK/runtime is distributed under Microsoft's own license terms and is not relicensed by StarSyncUniverse.
+StarSyncUniverse targets .NET 10 for Windows and uses WPF.
 
-## SCUnpacked Data
+The .NET runtime project is published by Microsoft / the .NET Foundation under
+the MIT License. Individual .NET distributions may also include third-party
+components covered by separate notices.
 
-Optional identity/enrichment/validation workflows can consume SCUnpacked Data.
+Upstream:
+- https://github.com/dotnet/runtime
+- https://github.com/dotnet/wpf
+- https://dotnet.microsoft.com/
 
-- Repository: https://github.com/StarCitizenWiki/scunpacked-data
+.NET Runtime MIT License:
 
-SCUnpacked content is not authored by StarSyncUniverse. Review the upstream repository and any applicable game-data/content terms before redistributing refreshed datasets. The public StarSyncUniverse tree only includes the packaged project baseline required for standalone operation and removes local machine paths from its provenance metadata.
+MIT License
 
-## Star Citizen Wiki API
+Copyright (c) .NET Foundation and Contributors
 
-Optional location/media enrichment can use the Star Citizen Wiki API.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-- API: https://api.star-citizen.wiki/
-- Source: https://github.com/StarCitizenWiki/API
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Data and media returned by the service remain subject to the upstream project's terms and the rights of their original owners.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-## StarCitizen.Tools
+For complete and current .NET notices, consult the upstream repository's
+LICENSE.TXT and THIRD-PARTY-NOTICES.TXT.
 
-StarCitizen.Tools is used as an optional community reference source for descriptions, media and visual calibration references.
+## 2. Microsoft WebView2
 
+StarSyncUniverse uses the Microsoft.Web.WebView2 NuGet package. The current
+StarSyncUniverse project references version 1.0.3719.77.
+
+Upstream:
+- https://www.nuget.org/packages/Microsoft.Web.WebView2/
+- https://developer.microsoft.com/microsoft-edge/webview2/
+
+Microsoft WebView2 package license notice:
+
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+- Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+- Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+- The name of Microsoft Corporation, or the names of its contributors may not
+  be used to endorse or promote products derived from this software without
+  specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+The complete license contained in the exact NuGet package version used for a
+release remains authoritative.
+
+## 3. SCUnpacked
+
+StarSyncUniverse can consume or correlate information generated by community
+projects in the SCUnpacked ecosystem.
+
+Upstream:
+- https://github.com/StarCitizenWiki/scunpacked
+- https://github.com/StarCitizenWiki/scunpacked-data
+
+The archived StarCitizenWiki/scunpacked source repository identifies itself as
+GPL-3.0 licensed.
+
+StarSyncUniverse does not relicense SCUnpacked software under the
+StarSyncUniverse Community Use License. Any SCUnpacked software remains subject
+to its own upstream license.
+
+## 4. scunpacked-data
+
+The StarCitizenWiki/scunpacked-data repository contains unpacked Star Citizen
+game data produced by community tooling.
+
+At the time this notice was prepared, the repository did not expose an explicit
+repository-wide license through GitHub's license metadata. Because the material
+also contains or reflects Star Citizen game data, users and redistributors
+should not assume that the StarSyncUniverse license grants rights to that data.
+
+StarSyncUniverse may use processed, correlated, or cached factual information
+from this ecosystem. No ownership of upstream game data is claimed.
+
+If a StarSyncUniverse release includes a packaged baseline derived from this
+data, the StarSyncUniverse license applies only to original StarSyncUniverse
+selection, organization, processing logic, and original presentation work to
+the extent legally protectable. It does not replace rights or restrictions
+attached to the underlying data.
+
+## 5. Star Citizen Wiki / starcitizen.tools
+
+StarSyncUniverse may use starcitizen.tools as an external reference source or
+optional online enrichment source.
+
+Upstream:
 - https://starcitizen.tools/
 
-Content retrieved or referenced from StarCitizen.Tools is not relicensed by StarSyncUniverse.
+The Star Citizen Wiki states that non-game-content material is generally
+available under Creative Commons Attribution-ShareAlike unless otherwise noted.
+Individual files may have their own specific license tags and must be checked
+individually.
 
-## StarBreaker
+Game content and game materials shown by the wiki remain subject to rights of
+their respective owners.
 
-StarSyncUniverse can optionally invoke a separately supplied StarBreaker executable to inspect a local Star Citizen `Data.p4k` installation. StarBreaker is not bundled in this prepared public tree.
+StarSyncUniverse does not place starcitizen.tools material under the
+StarSyncUniverse Community Use License. Any downloaded, cached, referenced, or
+otherwise used wiki material remains governed by its applicable upstream
+license and any additional rights that apply to Star Citizen intellectual
+property.
 
-Add the canonical public StarBreaker repository/project URL here before publication if one is available:
+When StarSyncUniverse uses public images only as visual QA/calibration
+references and does not redistribute those images, those source images remain
+external third-party material.
 
-- **[STARBREAKER_REPOSITORY_URL]**
+## 6. Cloud Imperium / Star Citizen intellectual property
 
-## Cloud Imperium Games / Roberts Space Industries
+StarSyncUniverse is an unofficial Star Citizen community project.
 
-Star Citizen, related names, logos, game data, visual references and trademarks are property of their respective owners. StarSyncUniverse is not affiliated with, endorsed by or sponsored by Cloud Imperium Games or Roberts Space Industries.
+It is not affiliated with, sponsored by, or endorsed by Cloud Imperium Games,
+Roberts Space Industries, or their affiliated companies.
 
-The source-code license in this repository does not grant rights to third-party trademarks, copyrighted game assets or data beyond rights already granted by their respective owners/terms.
+No ownership is claimed over Star Citizen, Squadron 42, related game names,
+lore, game data, game assets, imagery, trademarks, or other intellectual
+property owned or controlled by Cloud Imperium or other respective rights
+holders.
 
-## Project visual assets
+Users should consult the current official fan-content guidance before
+redistributing Star Citizen-related materials or using them publicly or
+commercially:
 
-Files under `src/StarSyncUniverse/Assets/Branding` are StarSyncUniverse project branding.
+- https://support.robertsspaceindustries.com/hc/en-us/articles/360006895793-Star-Citizen-Fankit-and-Fandom-FAQ
 
-Files under `Assets/BodyTextures`, `Assets/CommunityBaseline` and related presentation/data folders may contain project-generated or transformed representations derived from public/community/game-data references. They are provided for this fan-project implementation; do not interpret the GPL source license as a blanket relicensing of underlying Star Citizen intellectual property.
+The StarSyncUniverse Community Use License cannot grant rights in Cloud
+Imperium intellectual property.
 
-## Dependencies
+## 7. StarBreaker
 
-The project also depends on standard .NET runtime/framework components and NuGet dependencies listed in the project files. Each dependency remains under its upstream license. Use `dotnet list package --include-transitive` before a release if a complete dependency inventory is required.
+StarSyncUniverse can optionally interoperate with StarBreaker for local
+Data.p4k extraction and refresh workflows.
+
+StarBreaker is a separate tool/project. Its binaries, source code, and any
+third-party components are governed by the licenses that apply to that project.
+
+Unless explicitly included in a particular release, StarBreaker is not
+licensed as part of StarSyncUniverse.
+
+## 8. External APIs and services
+
+Optional online enrichment providers, APIs, websites, and other external
+services remain subject to their own terms of use, API terms, licenses, rate
+limits, copyright notices, and privacy policies.
+
+The StarSyncUniverse Community Use License does not override those terms.
+
+## 9. General rule
+
+Third-party license rights are independent of StarSyncUniverse's restrictions.
+
+For example, where a third-party component is licensed under MIT, BSD, GPL,
+Creative Commons, or another license, users retain the rights granted directly
+by that license for that third-party material. Those rights do not grant a
+right to modify, rebrand, redistribute, or commercialize StarSyncUniverse's
+original project material contrary to the StarSyncUniverse Community Use
+License.
+
+If a release package contains additional third-party license files, those files
+form part of these notices and must be retained as required by their respective
+licenses.
