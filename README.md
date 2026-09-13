@@ -181,9 +181,56 @@ There are no paid feature locks implied by this support link.
 
 ## License
 
-The original StarSync Universe source code in this repository is licensed under **GNU GPL-3.0-or-later**. Third-party libraries, community datasets, trademarks and external/game-derived reference material retain their own licenses and terms and are not relicensed by this project. 
+StarSyncUniverse is **source-available software for private, personal,
+non-commercial use**.
 
-See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
+Beginning with **version 0.7.77**, the StarSync Universe Community Use License
+applies to StarSyncUniverse original project material.
+
+Without prior written permission, the license does **not** permit:
+
+- modifying, patching, adapting, or creating derivative StarSyncUniverse builds;
+- rebranding or removing/replacing StarSyncUniverse branding;
+- redistribution, mirroring, repackaging, or third-party hosting;
+- commercial use;
+- public streaming, broadcasting, public video publication, or other public
+  presentation of StarSyncUniverse or its user interface.
+
+Normal use of the application remains permitted, including changing settings
+and creating your own bookmarks, descriptions, images, configuration, and
+other supported user data.
+
+**Third-party material is not relicensed under the StarSyncUniverse license.**
+Third-party software, libraries, data, media, services, and game-related
+content remain subject to their own licenses, terms, and rights.
+
+See:
+
+- [`LICENSE`](LICENSE) — StarSyncUniverse Community Use License
+- [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) — third-party components,
+  data sources, and license separation
+- [`LEGAL_NOTICE.md`](LEGAL_NOTICE.md) — Star Citizen / fan-project disclaimer
+- [`LICENSE_CHANGE_NOTICE.md`](LICENSE_CHANGE_NOTICE.md) — version transition
+
+Earlier StarSyncUniverse releases remain governed by the license terms under
+which those releases were originally distributed.
+
+## Unofficial Star Citizen community project
+
+StarSyncUniverse is an **unofficial community project** and is not affiliated
+with, sponsored by, or endorsed by Cloud Imperium Games, Roberts Space
+Industries, or their affiliated companies.
+
+No ownership is claimed over Star Citizen, Squadron 42, related game data,
+lore, imagery, assets, or trademarks. Those materials remain the property of
+their respective rights holders.
+
+StarSyncUniverse claims rights only in its original software, branding,
+application design, documentation, and original presentation work, subject to
+applicable third-party rights.
+
+See [`LEGAL_NOTICE.md`](LEGAL_NOTICE.md) and
+[`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for details.
 
 ## Disclaimer
 
